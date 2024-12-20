@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <script lang="javascript">
+            function getResponseMain() {
+                fetch("/response")
+                    .then(res => res.json())
+                    .then(d => {
+                        document.getElementById("responseMain").textContent = d.message;
+                    });
+            }
+
+            function getResponse3() {
+                fetch("/getApi3")
+                    .then(res => res.json())
+                    .then(d => {
+                        document.getElementById("response3").textContent = d.message;
+                    });
+            }
+        </script>
+    </head>
+    <body>
+        <p>This is a test of having multiple NodeJS APIs running on the same server on different ports.</p>
+        <br />
+        <button type="button" onclick="getResponseMain()">Get this API response.</button>
+        <span id="responseMain"></span>
+        <br />
+        <button type="button" onclick="getResponse3()">Get API 3 response.</button>
+        <span id="response3"></span>
+    </body>
+</html>

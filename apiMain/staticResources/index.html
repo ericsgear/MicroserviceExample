@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        <script lang="javascript">
+            function getResponseMain() {
+                fetch("/response")
+                    .then(res => res.json())
+                    .then(d => {
+                        document.getElementById("responseMain").textContent = d.message;
+                    });
+            }
+
+            function getResponse1() {
+                fetch("/getApi1")
+                    .then(res => res.json())
+                    .then(d => {
+                        document.getElementById("response1").textContent = d.message;
+                    });
+            }
+
+            function getResponse2() {
+                fetch("/getApi2")
+                    .then(res => res.json())
+                    .then(d => {
+                        document.getElementById("response2").textContent = d.message;
+                    });
+            }
+
+            function getResponse3() {
+                fetch("/getApi3")
+                    .then(res => res.json())
+                    .then(d => {
+                        document.getElementById("response3").textContent = d.message;
+                    });
+            }
+
+            function getResponseAll() {
+                fetch("/getApiAll")
+                    .then(res => res.json())
+                    .then(d => {
+                        document.getElementById("responseAll").textContent = d.message;
+                    });
+            }
+        </script>
+    </head>
+    <body>
+        <p>This is a test of having multiple NodeJS APIs running on the same server on different ports.</p>
+        <br />
+        <button type="button" onclick="getResponseMain()">Get main API response.</button>
+        <span id="responseMain"></span>
+        <br />
+        <button type="button" onclick="getResponse1()">Get API 1 response.</button>
+        <span id="response1"></span>
+        <br />
+        <button type="button" onclick="getResponse2()">Get API 2 response.</button>
+        <span id="response2"></span>
+        <br />
+        <button type="button" onclick="getResponse3()">Get API 3 response.</button>
+        <span id="response3"></span>
+        <br />
+        <button type="button" onclick="getResponseAll()">Get all API responses.</button>
+        <span id="responseAll"></span>
+    </body>
+</html>
