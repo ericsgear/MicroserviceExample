@@ -35,7 +35,7 @@
         ]
     },
     "scripts": {
-        "startMain": "ts-node apiMain/ServerMain.ts",
+        "startMain": "nodemon apiMain/ServerMain.ts",
         "start1": "nodemon api1/Server1.ts",
         "start2": "nodemon api2/Server2.ts",
         "start3": "nodemon api3/Server3.ts",
