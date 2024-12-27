@@ -2,11 +2,11 @@
     "name": "microservicesexample",
     "version": "0.1.0",
     "private": true,
+    "main": "apiMain/ServerMain.ts",
     "compilerOptions": {
         "module": "NodeNext",
         "moduleResolution": "NodeNext"
     },
-    "main": "apiMain/ServerMain.ts",
     "ts-node": {
         "esm": true
     },
@@ -14,6 +14,7 @@
         "express": "^4.21.2",
         "npm-run-all": "^4.1.5",
         "reflect-metadata": "^0.2.2",
+        "ts-node": "^10.9.2",
         "typedi": "^0.10.0",
         "typescript": "^5.7.2"
     },
@@ -22,21 +23,21 @@
     },
     "browserslist": {
         "production": [
-        ">0.2%",
-        "not dead",
-        "not op_mini all"
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
         ],
         "development": [
-        "last 1 chrome version",
-        "last 1 firefox version",
-        "last 1 safari version"
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
         ]
     },
     "scripts": {
         "startMain": "ts-node apiMain/ServerMain.ts",
-        "start": "ts-node api1/Server1.ts",
+        "start1": "ts-node api1/Server1.ts",
         "start2": "ts-node api2/Server2.ts",
         "start3": "ts-node api3/Server3.ts",
-        "start0": "npm-run-all -p startMain start1 start2 start3"
+        "start": "npm-run-all -p startMain start1 start2 start3"
     }
 }
