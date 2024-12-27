@@ -6,7 +6,7 @@
         "module": "NodeNext",
         "moduleResolution": "NodeNext"
     },
-    "main": "npm run start",
+    "main": "apiMain/ServerMain.ts",
     "ts-node": {
         "esm": true
     },
@@ -20,11 +20,23 @@
     "devDependencies": {
         "@types/express": "^5.0.0"
     },
+    "browserslist": {
+        "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+        ],
+        "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+        ]
+    },
     "scripts": {
         "startMain": "ts-node apiMain/ServerMain.ts",
-        "start1": "ts-node api1/Server1.ts",
+        "start": "ts-node api1/Server1.ts",
         "start2": "ts-node api2/Server2.ts",
         "start3": "ts-node api3/Server3.ts",
-        "start": "npm-run-all -p startMain start1 start2 start3"
+        "start0": "npm-run-all -p startMain start1 start2 start3"
     }
 }
