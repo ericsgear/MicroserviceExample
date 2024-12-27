@@ -38,6 +38,6 @@
         "start1": "ts-node api1/Server1.ts",
         "start2": "ts-node api2/Server2.ts",
         "start3": "ts-node api3/Server3.ts",
-        "start": "npm-run-all -p startMain start1"
+        "start": "npm-run-all -p startMain start1 start2"
     }
 }
