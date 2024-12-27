@@ -12,15 +12,14 @@
     },
     "dependencies": {
         "express": "^4.21.2",
-        "nodemon": "^3.1.9",
         "npm-run-all": "^4.1.5",
         "reflect-metadata": "^0.2.2",
         "ts-node": "^10.9.2",
         "typedi": "^0.10.0",
-        "typescript": "^5.7.2"
+        "typescript": "^5.7.2",
+        "@types/express": "^5.0.0"
     },
     "devDependencies": {
-        "@types/express": "^5.0.0"
     },
     "browserslist": {
         "production": [
@@ -35,10 +34,10 @@
         ]
     },
     "scripts": {
-        "startMain": "nodemon apiMain/ServerMain.ts",
-        "start1": "nodemon api1/Server1.ts",
-        "start2": "nodemon api2/Server2.ts",
-        "start3": "nodemon api3/Server3.ts",
+        "startMain": "ts-node apiMain/ServerMain.ts",
+        "start1": "ts-node api1/Server1.ts",
+        "start2": "ts-node api2/Server2.ts",
+        "start3": "ts-node api3/Server3.ts",
         "start": "npm-run-all -p startMain start1"
     }
 }
